@@ -12,6 +12,16 @@
 		6943C49321830B6300672DE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6943C49121830B6300672DE0 /* Main.storyboard */; };
 		6943C49521830B6300672DE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6943C49421830B6300672DE0 /* Assets.xcassets */; };
 		6943C49821830B6300672DE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6943C49621830B6300672DE0 /* LaunchScreen.storyboard */; };
+		6943C4AA21830CCD00672DE0 /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A021830CCD00672DE0 /* nssl0049.jpg */; };
+		6943C4AB21830CCD00672DE0 /* nssl0046.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A121830CCD00672DE0 /* nssl0046.jpg */; };
+		6943C4AC21830CCD00672DE0 /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A221830CCD00672DE0 /* nssl0091.jpg */; };
+		6943C4AD21830CCD00672DE0 /* nssl0045.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A321830CCD00672DE0 /* nssl0045.jpg */; };
+		6943C4AE21830CCD00672DE0 /* nssl0051.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A421830CCD00672DE0 /* nssl0051.jpg */; };
+		6943C4AF21830CCD00672DE0 /* nssl0041.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A521830CCD00672DE0 /* nssl0041.jpg */; };
+		6943C4B021830CCD00672DE0 /* nssl0042.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A621830CCD00672DE0 /* nssl0042.jpg */; };
+		6943C4B121830CCD00672DE0 /* nssl0043.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A721830CCD00672DE0 /* nssl0043.jpg */; };
+		6943C4B221830CCD00672DE0 /* nssl0033.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A821830CCD00672DE0 /* nssl0033.jpg */; };
+		6943C4B321830CCD00672DE0 /* nssl0034.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6943C4A921830CCD00672DE0 /* nssl0034.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +32,16 @@
 		6943C49421830B6300672DE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6943C49721830B6300672DE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6943C49921830B6300672DE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6943C4A021830CCD00672DE0 /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
+		6943C4A121830CCD00672DE0 /* nssl0046.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0046.jpg; sourceTree = "<group>"; };
+		6943C4A221830CCD00672DE0 /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
+		6943C4A321830CCD00672DE0 /* nssl0045.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0045.jpg; sourceTree = "<group>"; };
+		6943C4A421830CCD00672DE0 /* nssl0051.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0051.jpg; sourceTree = "<group>"; };
+		6943C4A521830CCD00672DE0 /* nssl0041.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0041.jpg; sourceTree = "<group>"; };
+		6943C4A621830CCD00672DE0 /* nssl0042.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0042.jpg; sourceTree = "<group>"; };
+		6943C4A721830CCD00672DE0 /* nssl0043.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0043.jpg; sourceTree = "<group>"; };
+		6943C4A821830CCD00672DE0 /* nssl0033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0033.jpg; sourceTree = "<group>"; };
+		6943C4A921830CCD00672DE0 /* nssl0034.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0034.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +80,26 @@
 				6943C49421830B6300672DE0 /* Assets.xcassets */,
 				6943C49621830B6300672DE0 /* LaunchScreen.storyboard */,
 				6943C49921830B6300672DE0 /* Info.plist */,
+				6943C49F21830CCD00672DE0 /* Content */,
 			);
 			path = HackingWithSwiftProject1;
+			sourceTree = "<group>";
+		};
+		6943C49F21830CCD00672DE0 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				6943C4A021830CCD00672DE0 /* nssl0049.jpg */,
+				6943C4A121830CCD00672DE0 /* nssl0046.jpg */,
+				6943C4A221830CCD00672DE0 /* nssl0091.jpg */,
+				6943C4A321830CCD00672DE0 /* nssl0045.jpg */,
+				6943C4A421830CCD00672DE0 /* nssl0051.jpg */,
+				6943C4A521830CCD00672DE0 /* nssl0041.jpg */,
+				6943C4A621830CCD00672DE0 /* nssl0042.jpg */,
+				6943C4A721830CCD00672DE0 /* nssl0043.jpg */,
+				6943C4A821830CCD00672DE0 /* nssl0033.jpg */,
+				6943C4A921830CCD00672DE0 /* nssl0034.jpg */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +160,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6943C4AB21830CCD00672DE0 /* nssl0046.jpg in Resources */,
+				6943C4B221830CCD00672DE0 /* nssl0033.jpg in Resources */,
+				6943C4AE21830CCD00672DE0 /* nssl0051.jpg in Resources */,
+				6943C4AC21830CCD00672DE0 /* nssl0091.jpg in Resources */,
+				6943C4B121830CCD00672DE0 /* nssl0043.jpg in Resources */,
+				6943C4B321830CCD00672DE0 /* nssl0034.jpg in Resources */,
+				6943C4AA21830CCD00672DE0 /* nssl0049.jpg in Resources */,
+				6943C4AF21830CCD00672DE0 /* nssl0041.jpg in Resources */,
+				6943C4B021830CCD00672DE0 /* nssl0042.jpg in Resources */,
 				6943C49821830B6300672DE0 /* LaunchScreen.storyboard in Resources */,
 				6943C49521830B6300672DE0 /* Assets.xcassets in Resources */,
+				6943C4AD21830CCD00672DE0 /* nssl0045.jpg in Resources */,
 				6943C49321830B6300672DE0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
