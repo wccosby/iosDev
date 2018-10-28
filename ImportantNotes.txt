@@ -28,3 +28,23 @@ ctrl + click and drag from a ui element to add constraints
 Asset Catalogs -- optimized form of image/content management for apps
 Select Frames and then alt+cmd+= to update the frames to conform with autolayout - (or editor -> autoresolve layout issues -> update frames)
 Have to add outlets to be able to reference things (like buttons, image views, etc...) in code
+
+CALayer is one of the main ways to adjust the appearance of the app (core animation layer)
+
+GamePlayKit (built into everything)
+
+Connections:
+  - @IBOutlet is a way of connecting code to storyboard layouts
+  - @IBAction is a way of making storyboard layouts trigger code
+
+  UIAlertController().
+    - This is used to show an alert with options to the user.
+    - there are two kinds of style: \
+        - .alert, which pops up a message box over the center of the screen,
+          - use this when informing user of a situation change
+        - .actionSheet, which slides options up from the bottom.
+
+
+  This error message:
+  “Cannot convert value of type ‘() -> ()’ to expected argument type ‘((UIAlertAction) -> Void)?"
+  - basically says I want the function you told me to run to take type UIAlertAction as an input
