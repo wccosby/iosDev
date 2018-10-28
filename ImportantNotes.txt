@@ -1,0 +1,16 @@
+Use let constants as often as possible --> faster code and many things don't need to be changed:
+  - like the file manager reference, core bundle paths etc...
+
+try! --> try the following code, which could go wrong, but I'm certain it will work and if it doesn't work then nothing else will anyway
+
+Give controllers in the story board a StoryBoardID --> can then tell the app to load this controller/view by using
+instantiateViewController(withIdentifier: "storyboardID") from anywhere in the code --> will have to use optionals for this
+because swift doesn't know its coming from the story board --> will need to typecast and then tell navigation controller to enact the change
+
+// inside a different controller
+override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+        vc.selectedImage = pictures[indexPath.row] // set the properties of the other controller.
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}
