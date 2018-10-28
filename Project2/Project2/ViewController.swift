@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    @IBAction func buttonTapped(_ sender:UIButton) {
         var title: String
         
         if sender.tag == correctAnswer {

@@ -48,3 +48,5 @@ Connections:
   This error message:
   “Cannot convert value of type ‘() -> ()’ to expected argument type ‘((UIAlertAction) -> Void)?"
   - basically says I want the function you told me to run to take type UIAlertAction as an input
+
+  Remember to do the "embed in navigation controller"
