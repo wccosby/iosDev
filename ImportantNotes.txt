@@ -1,3 +1,7 @@
+/////////////////////
+Project 1
+/////////////////////
+
 Use let constants as often as possible --> faster code and many things don't need to be changed:
   - like the file manager reference, core bundle paths etc...
 
@@ -14,3 +18,13 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+
+/////////////////////
+Project 2
+Key Concepts and Ideas
+/////////////////////
+ctrl + click and drag from a ui element to add constraints
+Asset Catalogs -- optimized form of image/content management for apps
+Select Frames and then alt+cmd+= to update the frames to conform with autolayout - (or editor -> autoresolve layout issues -> update frames)
+Have to add outlets to be able to reference things (like buttons, image views, etc...) in code
