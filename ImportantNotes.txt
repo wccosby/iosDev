@@ -50,3 +50,29 @@ Connections:
   - basically says I want the function you told me to run to take type UIAlertAction as an input
 
   Remember to do the "embed in navigation controller"
+
+
+
+
+
+/////////////////////
+Project 3
+Key Concepts and Ideas
+Adding Social
+/////////////////////
+UIActivityViewController
+    - go to place when adding sharing to an app
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  ------------------------------

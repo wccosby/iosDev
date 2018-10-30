@@ -1,6 +1,6 @@
 //
 //  DetailViewController.swift
-//  Project3
+//  HackingWithSwiftProject1
 //
 //  Created by William Cosby on 10/27/18.
 //  Copyright © 2018 William Cosby. All rights reserved.
