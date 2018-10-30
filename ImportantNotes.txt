@@ -62,7 +62,11 @@ Adding Social
 /////////////////////
 UIActivityViewController
     - go to place when adding sharing to an app
-    
+    - will auto give functionality to share by imessage, facebook, twitter, email
+    - also lets us save image to photos
+    - Wants facts, not optionals...so if passing from something like UIImage view that has an option image
+      must do UIActivityViewController(activityItems: [imageView.image!], ...)
+      
 
 
 
