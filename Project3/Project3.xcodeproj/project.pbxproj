@@ -60,7 +60,7 @@
 		6943C48121830B6300672DE0 = {
 			isa = PBXGroup;
 			children = (
-				6943C48C21830B6300672DE0 /* Project3 */,
+				6943C48C21830B6300672DE0 /* HackingWithSwiftProject1 */,
 				6943C48B21830B6300672DE0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +73,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6943C48C21830B6300672DE0 /* Project3 */ = {
+		6943C48C21830B6300672DE0 /* HackingWithSwiftProject1 */ = {
 			isa = PBXGroup;
 			children = (
 				6943C48D21830B6300672DE0 /* AppDelegate.swift */,
@@ -85,7 +85,7 @@
 				6943C49921830B6300672DE0 /* Info.plist */,
 				6943C49F21830CCD00672DE0 /* Content */,
 			);
-			path = Project3;
+			path = HackingWithSwiftProject1;
 			sourceTree = "<group>";
 		};
 		6943C49F21830CCD00672DE0 /* Content */ = {
@@ -140,7 +140,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6943C48521830B6300672DE0 /* Build configuration list for PBXProject "Project3" */;
+			buildConfigurationList = 6943C48521830B6300672DE0 /* Build configuration list for PBXProject "HackingWithSwiftProject1" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -335,12 +335,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Project3/Info.plist";
+				INFOPLIST_FILE = HackingWithSwiftProject1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Project3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.HackingWithSwiftProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -352,12 +352,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Project3/Info.plist";
+				INFOPLIST_FILE = HackingWithSwiftProject1/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.Project3;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.HackingWithSwiftProject1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,7 +367,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6943C48521830B6300672DE0 /* Build configuration list for PBXProject "Project3" */ = {
+		6943C48521830B6300672DE0 /* Build configuration list for PBXProject "HackingWithSwiftProject1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6943C49A21830B6300672DE0 /* Debug */,

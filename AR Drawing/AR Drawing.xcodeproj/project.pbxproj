@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69D9F16221888C2E00A7F021 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D9F16121888C2E00A7F021 /* AppDelegate.swift */; };
-		69D9F16421888C2E00A7F021 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D9F16321888C2E00A7F021 /* ViewController.swift */; };
-		69D9F16721888C2E00A7F021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D9F16521888C2E00A7F021 /* Main.storyboard */; };
-		69D9F16921888C2F00A7F021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D9F16821888C2F00A7F021 /* Assets.xcassets */; };
-		69D9F16C21888C2F00A7F021 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D9F16A21888C2F00A7F021 /* LaunchScreen.storyboard */; };
+		693FC6182189DABC00D0AD64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FC6172189DABC00D0AD64 /* AppDelegate.swift */; };
+		693FC61A2189DABC00D0AD64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693FC6192189DABC00D0AD64 /* ViewController.swift */; };
+		693FC61D2189DABC00D0AD64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693FC61B2189DABC00D0AD64 /* Main.storyboard */; };
+		693FC61F2189DABE00D0AD64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 693FC61E2189DABE00D0AD64 /* Assets.xcassets */; };
+		693FC6222189DABE00D0AD64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693FC6202189DABE00D0AD64 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		69D9F15E21888C2E00A7F021 /* VRTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		69D9F16121888C2E00A7F021 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69D9F16321888C2E00A7F021 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		69D9F16621888C2E00A7F021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69D9F16821888C2F00A7F021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		69D9F16B21888C2F00A7F021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		69D9F16D21888C2F00A7F021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		693FC6142189DABC00D0AD64 /* AR Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Drawing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		693FC6172189DABC00D0AD64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		693FC6192189DABC00D0AD64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		693FC61C2189DABC00D0AD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		693FC61E2189DABE00D0AD64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		693FC6212189DABE00D0AD64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		693FC6232189DABE00D0AD64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		69D9F15B21888C2E00A7F021 /* Frameworks */ = {
+		693FC6112189DABC00D0AD64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		69D9F15521888C2E00A7F021 = {
+		693FC60B2189DABC00D0AD64 = {
 			isa = PBXGroup;
 			children = (
-				69D9F16021888C2E00A7F021 /* VRTest */,
-				69D9F15F21888C2E00A7F021 /* Products */,
+				693FC6162189DABC00D0AD64 /* AR Drawing */,
+				693FC6152189DABC00D0AD64 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		69D9F15F21888C2E00A7F021 /* Products */ = {
+		693FC6152189DABC00D0AD64 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69D9F15E21888C2E00A7F021 /* VRTest.app */,
+				693FC6142189DABC00D0AD64 /* AR Drawing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69D9F16021888C2E00A7F021 /* VRTest */ = {
+		693FC6162189DABC00D0AD64 /* AR Drawing */ = {
 			isa = PBXGroup;
 			children = (
-				69D9F16121888C2E00A7F021 /* AppDelegate.swift */,
-				69D9F16321888C2E00A7F021 /* ViewController.swift */,
-				69D9F16521888C2E00A7F021 /* Main.storyboard */,
-				69D9F16821888C2F00A7F021 /* Assets.xcassets */,
-				69D9F16A21888C2F00A7F021 /* LaunchScreen.storyboard */,
-				69D9F16D21888C2F00A7F021 /* Info.plist */,
+				693FC6172189DABC00D0AD64 /* AppDelegate.swift */,
+				693FC6192189DABC00D0AD64 /* ViewController.swift */,
+				693FC61B2189DABC00D0AD64 /* Main.storyboard */,
+				693FC61E2189DABE00D0AD64 /* Assets.xcassets */,
+				693FC6202189DABE00D0AD64 /* LaunchScreen.storyboard */,
+				693FC6232189DABE00D0AD64 /* Info.plist */,
 			);
-			path = VRTest;
+			path = "AR Drawing";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69D9F15D21888C2E00A7F021 /* VRTest */ = {
+		693FC6132189DABC00D0AD64 /* AR Drawing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69D9F17021888C2F00A7F021 /* Build configuration list for PBXNativeTarget "VRTest" */;
+			buildConfigurationList = 693FC6262189DABE00D0AD64 /* Build configuration list for PBXNativeTarget "AR Drawing" */;
 			buildPhases = (
-				69D9F15A21888C2E00A7F021 /* Sources */,
-				69D9F15B21888C2E00A7F021 /* Frameworks */,
-				69D9F15C21888C2E00A7F021 /* Resources */,
+				693FC6102189DABC00D0AD64 /* Sources */,
+				693FC6112189DABC00D0AD64 /* Frameworks */,
+				693FC6122189DABC00D0AD64 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = VRTest;
-			productName = VRTest;
-			productReference = 69D9F15E21888C2E00A7F021 /* VRTest.app */;
+			name = "AR Drawing";
+			productName = "AR Drawing";
+			productReference = 693FC6142189DABC00D0AD64 /* AR Drawing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		69D9F15621888C2E00A7F021 /* Project object */ = {
+		693FC60C2189DABC00D0AD64 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "William Cosby";
 				TargetAttributes = {
-					69D9F15D21888C2E00A7F021 = {
-						CreatedOnToolsVersion = 10.0;
+					693FC6132189DABC00D0AD64 = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 69D9F15921888C2E00A7F021 /* Build configuration list for PBXProject "VRTest" */;
+			buildConfigurationList = 693FC60F2189DABC00D0AD64 /* Build configuration list for PBXProject "AR Drawing" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 69D9F15521888C2E00A7F021;
-			productRefGroup = 69D9F15F21888C2E00A7F021 /* Products */;
+			mainGroup = 693FC60B2189DABC00D0AD64;
+			productRefGroup = 693FC6152189DABC00D0AD64 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69D9F15D21888C2E00A7F021 /* VRTest */,
+				693FC6132189DABC00D0AD64 /* AR Drawing */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		69D9F15C21888C2E00A7F021 /* Resources */ = {
+		693FC6122189DABC00D0AD64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69D9F16C21888C2F00A7F021 /* LaunchScreen.storyboard in Resources */,
-				69D9F16921888C2F00A7F021 /* Assets.xcassets in Resources */,
-				69D9F16721888C2E00A7F021 /* Main.storyboard in Resources */,
+				693FC6222189DABE00D0AD64 /* LaunchScreen.storyboard in Resources */,
+				693FC61F2189DABE00D0AD64 /* Assets.xcassets in Resources */,
+				693FC61D2189DABC00D0AD64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		69D9F15A21888C2E00A7F021 /* Sources */ = {
+		693FC6102189DABC00D0AD64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69D9F16421888C2E00A7F021 /* ViewController.swift in Sources */,
-				69D9F16221888C2E00A7F021 /* AppDelegate.swift in Sources */,
+				693FC61A2189DABC00D0AD64 /* ViewController.swift in Sources */,
+				693FC6182189DABC00D0AD64 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		69D9F16521888C2E00A7F021 /* Main.storyboard */ = {
+		693FC61B2189DABC00D0AD64 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				69D9F16621888C2E00A7F021 /* Base */,
+				693FC61C2189DABC00D0AD64 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		69D9F16A21888C2F00A7F021 /* LaunchScreen.storyboard */ = {
+		693FC6202189DABE00D0AD64 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				69D9F16B21888C2F00A7F021 /* Base */,
+				693FC6212189DABE00D0AD64 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		69D9F16E21888C2F00A7F021 /* Debug */ = {
+		693FC6242189DABE00D0AD64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -223,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		69D9F16F21888C2F00A7F021 /* Release */ = {
+		693FC6252189DABE00D0AD64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -278,38 +278,36 @@
 			};
 			name = Release;
 		};
-		69D9F17121888C2F00A7F021 /* Debug */ = {
+		693FC6272189DABE00D0AD64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U3992N3XQ;
-				INFOPLIST_FILE = VRTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = "AR Drawing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.VRTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Udemy.AR-Drawing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		69D9F17221888C2F00A7F021 /* Release */ = {
+		693FC6282189DABE00D0AD64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9U3992N3XQ;
-				INFOPLIST_FILE = VRTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				INFOPLIST_FILE = "AR Drawing/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hackingwithswift.VRTest;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Udemy.AR-Drawing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -319,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69D9F15921888C2E00A7F021 /* Build configuration list for PBXProject "VRTest" */ = {
+		693FC60F2189DABC00D0AD64 /* Build configuration list for PBXProject "AR Drawing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69D9F16E21888C2F00A7F021 /* Debug */,
-				69D9F16F21888C2F00A7F021 /* Release */,
+				693FC6242189DABE00D0AD64 /* Debug */,
+				693FC6252189DABE00D0AD64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69D9F17021888C2F00A7F021 /* Build configuration list for PBXNativeTarget "VRTest" */ = {
+		693FC6262189DABE00D0AD64 /* Build configuration list for PBXNativeTarget "AR Drawing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69D9F17121888C2F00A7F021 /* Debug */,
-				69D9F17221888C2F00A7F021 /* Release */,
+				693FC6272189DABE00D0AD64 /* Debug */,
+				693FC6282189DABE00D0AD64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 69D9F15621888C2E00A7F021 /* Project object */;
+	rootObject = 693FC60C2189DABC00D0AD64 /* Project object */;
 }
