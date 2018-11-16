@@ -16,6 +16,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = selectedImage
+        
+        // enable sharing navigation
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         // these if let statements help us by ensure that if for some reason selectedImage doesn't have a value
         // the whole app doesn't crash because the code in the brackets does not get executed
         if let imageToLoad = selectedImage {
@@ -32,6 +36,12 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
+    }
+    
+    @objc func shareTapped() {
+        let vc = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
