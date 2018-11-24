@@ -51,6 +51,7 @@ class ViewController: UITableViewController {
         return cell
     }
     
+
     @objc func promptForAnswer() {
         // get reference to the alert controller
         let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
@@ -64,8 +65,12 @@ class ViewController: UITableViewController {
         present(ac, animated: true)
     }
     
+
     func submit(answer: String) {
         let lowerAnswer = answer.lowercased()
+        
+        let errorTitle: String
+        let errorMessage: String
         
         // check if the word is correct:
         if isPossible(word: lowerAnswer) {
@@ -77,23 +82,54 @@ class ViewController: UITableViewController {
                     // which would be very wasteful...this will force load just the newest word without having to reload the whole list
                     let indexPath = IndexPath(row: 0, section: 0) // add the row to the tableView
                     tableView.insertRows(at: [indexPath], with: .automatic)
+                    return // exit the function
+                } else {
+                    errorTitle = "Word not recognised"
+                    errorMessage = "You can't just make them up, you know!"
                 }
+            } else {
+                errorTitle = "Word used already"
+                errorMessage = "Be more original!"
             }
+        } else {
+            errorTitle = "Word not possible"
+            errorMessage = "You can't spell that word from '\(title!.lowercased())'"
         }
+        
+        let ac = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
         
     }
     
     // Checks for Correctness --> need 3
+    
+    // is it possible to create that string with the characters in the target word?
     func isPossible(word: String) -> Bool {
+        var tempWord = title!.lowercased()
+        
+        for letter in word { // letter here will be a Character type
+            if let pos = tempWord.range(of: String(letter)) { // range(of:...) returns an optional position of where the item was found
+                tempWord.remove(at: pos.lowerBound)
+                print("Position of the word: \(pos)")
+            } else {
+                return false
+            }
+        }
         return true
     }
     
+    // has the player used that word already?
     func isOriginal(word: String) -> Bool {
-        return true
+        return !usedWords.contains(word) // return false if usedWords contains word
     }
     
+    // is the word an actual word?
     func isReal(word: String) -> Bool {
-        return true
+        let checker = UITextChecker()
+        let range = NSMakeRange(0, word.utf16.count)
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        return misspelledRange.location == NSNotFound
     }
 }
 
