@@ -25,11 +25,14 @@ class ViewController: UITableViewController {
             urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=10"
         }
         
-        if let url = URL(string: urlString) { // check if URL is valid
-            if let data = try? Data(contentsOf: url) { // returns content of URL, might throw an error (like if it couldn't connect to the url or data isn't there)
-                // we're OK to parse!
-                parse(json: data)
-                return // succeeded in parsing, exit the function
+        // making this async with 2nd highest tier of QoS (userInitiated)
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+            if let url = URL(string: urlString) { // check if URL is valid
+                if let data = try? Data(contentsOf: url) { // returns contents of URL, might throw error if website down or missing data
+                    // we're ok to parse now
+                    self.parse(json: data) // have to prefix with self because we are in an enclosure now
+                    return
+                }
             }
         }
         // error in parsing, the return statement will not be triggered, this will be reached
