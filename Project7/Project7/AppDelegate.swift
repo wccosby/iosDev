@@ -26,9 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBarController.viewControllers?.append(vc)
             
             // have to create a new reference to the view controller
-            let vc_2 = storyboard.instantiateViewController(withIdentifier: "NavController")
-            vc_2.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
-            tabBarController.viewControllers?.append(vc_2)
+//            let vc_2 = storyboard.instantiateViewController(withIdentifier: "NavController")
+//            vc_2.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 2)
+//            tabBarController.viewControllers?.append(vc_2)
         }
         
         return true

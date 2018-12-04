@@ -16,31 +16,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let urlString: String
-        if navigationController?.tabBarItem.tag == 0 {
-            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
-        } else if navigationController?.tabBarItem.tag == 1 {
-            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
-        } else {
-            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=10"
-        }
         
-        // making this async with 2nd highest tier of QoS (userInitiated)
-        // note that in doing this we need to make showError() and parse() functions reference async() as well
-        // this is because there is UI code in those functions that we NEED to push to the main thread
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-            if let url = URL(string: urlString) { // check if URL is valid
-                if let data = try? Data(contentsOf: url) { // returns contents of URL, might throw error if website down or missing data
-                    // we're ok to parse now
-                    self.parse(json: data) // have to prefix with self because we are in an enclosure now
-                    return
-                }
-            }
-        }
-        // error in parsing, the return statement will not be triggered, this will be reached
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
         
-        // TODO: fix how this is called becuase with the new async this will be called regardless, every time all the time
-        showError()
     }
     
     // define the number of rows to give the tableViewController
@@ -57,17 +35,35 @@ class ViewController: UITableViewController {
         return cell
     }
     
-    // Parse the incoming JSON data
-    func parse(json: Data)  {
-        let decoder = JSONDecoder() // dedicated to converting json to codable objects
+    @objc func fetchJSON() { // because "performSelector" uses #selector we need @objc
+        let urlString: String
         
-        // Petitions.self is swift's way of referring to the Petitions type itself, not an instance of it
+        if navigationController?.tabBarItem.tag == 0 {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+        } else {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
+        }
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                return
+            }
+        }
+        // if there is an error then instantiate the main thread and run the showError method.
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+    }
+    
+    // Parse the incoming JSON data
+    func parse(json: Data) {
+        let decoder = JSONDecoder()
+        
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
             petitions = jsonPetitions.results
-            // now we need to reload the UI but that is a UI function so we NEED to push back to the main thread
-            DispatchQueue.main.async { [unowned self] in // making the data load async
-                self.tableView.reloadData() // reload the whole table (could make this fancy by checking what's new and then reloading just the first N elements
-            }
+            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil,
+                                      waitUntilDone: false)
+        } else {
+            performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
         }
     }
     
@@ -79,13 +75,10 @@ class ViewController: UITableViewController {
     }
     
     // error to show if loading data went wrong
-    func showError() {
-        // now we need to reload the UI but that is a UI function so we NEED to push back to the main thread
-        DispatchQueue.main.async { [unowned self] in
-            let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please sheck your connection and try again.", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "OK", style: .default))
-            self.present(ac, animated: true)
-        }
+    @objc func showError() { // because "performSelector" uses #selector we need @objc
+        let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default))
+        present(ac, animated: true)
     }
 
 }
