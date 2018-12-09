@@ -18,6 +18,13 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         // add a button so that people can load pictures in to the app
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
+        
+        let defaults = UserDefaults.standard
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
+                people = decodedPeople ?? [Person]()
+            }
+        }
     }
 
     /////////////
@@ -59,7 +66,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         ac.addAction(UIAlertAction(title: "Save", style: .default) { [unowned self, ac] _ in
             let newName = ac.textFields![0]
             person.name = newName.text!
-            
+            self.save() // save the userDefaults
             self.collectionView?.reloadData()
         })
         
@@ -97,6 +104,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         let person = Person(name: "Unknown", image: imageName)
         people.append(person)
+        self.save() // saving for UserDefaults
         collectionView?.reloadData()
         
         dismiss(animated: true)
@@ -108,6 +116,18 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+    
+    //////////////
+    // code to save data to UserDefaults
+    // this method will be called anytime we update a person's name or image
+    // converts the array of people into a Data object that can be stored in the UserDefaults
+    //////////////
+    func save() {
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) { // saving the people array in UserDefaults
+            let defaults = UserDefaults.standard
+            defaults.set(savedData, forKey: "People")
+        }
     }
 }
 
