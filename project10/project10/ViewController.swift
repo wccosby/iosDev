@@ -12,6 +12,10 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     
     var people = [Person]() // list of our custom Person data type (its a Class)
 
+    
+    /////////////
+    // View Did Load
+    /////////////
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,10 +25,14 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
         
         let defaults = UserDefaults.standard
         if let savedPeople = defaults.object(forKey: "people") as? Data {
-            if let decodedPeople = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(savedPeople) as? [Person] {
-                people = decodedPeople ?? [Person]()
+            let jsonDecoder = JSONDecoder()
+            do {
+                people = try jsonDecoder.decode([Person].self, from: savedPeople)
+            } catch {
+                print("Failed to load people")
             }
         }
+        
     }
 
     /////////////
@@ -124,9 +132,12 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     // converts the array of people into a Data object that can be stored in the UserDefaults
     //////////////
     func save() {
-        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: people, requiringSecureCoding: false) { // saving the people array in UserDefaults
+        let jsonEncoder = JSONEncoder()
+        if let savedData = try? jsonEncoder.encode(people) {
             let defaults = UserDefaults.standard
-            defaults.set(savedData, forKey: "People")
+            defaults.set(savedData, forKey: "people")
+        } else {
+            print("Failed to save people")
         }
     }
 }
