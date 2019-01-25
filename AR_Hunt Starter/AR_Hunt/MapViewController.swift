@@ -22,15 +22,88 @@
 
 import UIKit
 import MapKit
-
+import CoreLocation
 
 class MapViewController: UIViewController {
 
   @IBOutlet weak var mapView: MKMapView!
   
+  var targets = [ARItem]() // save the AR targets
+  
+  // load the manager that will give us permission to use location
+  let locationManager = CLLocationManager()
+  
+  // track user location
+  var userLocation: CLLocation?
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     mapView.userTrackingMode = MKUserTrackingMode.followWithHeading
+    
+    setupLocations() // create and add the annotations
+    
+    // see if we have permission to use location and ask if we don't
+    if CLLocationManager.authorizationStatus() == .notDetermined {
+      locationManager.requestWhenInUseAuthorization()
+    }
+  }
+  
+  func setupLocations() {
+    // hard code some initial examples
+    // TODO: move this to server based database
+    let firstTarget = ARItem(itemDescription: "wolf", location:CLLocation(latitude: -37.814738, longitude: 144.968624))
+    targets.append(firstTarget)
+    
+    let secondTarget = ARItem(itemDescription: "dragon", location: CLLocation(latitude: -37.815882, longitude: 144.964150))
+    targets.append(secondTarget)
+    
+    let thirdTarget = ARItem(itemDescription: "wolf", location: CLLocation(latitude: -37.811916, longitude: 144.967927))
+    targets.append(thirdTarget)
+    
+    let fourthTarget = ARItem(itemDescription: "dragon", location: CLLocation(latitude: -37.814577, longitude: 144.967927))
+    targets.append(fourthTarget)
+    
+    for item in targets {
+      let annotation = MapAnnotation(location: item.location.coordinate, item: item)
+      self.mapView.addAnnotation(annotation)
+    }
+    
+  }
+  
+}
+
+
+extension MapViewController: MKMapViewDelegate {
+  func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    self.userLocation = userLocation.location
+  }
+  
+  func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    // get the coordinate of the selected annotation (could also get an id or some promotion indicator
+    let coordinate = view.annotation!.coordinate
+    
+    // make sure the optional userLocation is populated
+    if let userCoordinate = userLocation {
+      
+      // make sure the tapped item is within range of the user's location
+      if userCoordinate.distance(from: CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)) < 50 {
+        
+        // instantiate an instances of ARViewController (here it is called "Main") from the storyboard
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ViewController {
+          
+          // check if the tapped annotation is a MapAnnotation
+          if let mapAnnotation = view.annotation as? MapAnnotation {
+            
+            // present the viewController for the ARViewController frame
+            self.present(viewController, animated: true, completion: nil)
+          }
+        }
+      }
+    }
   }
 }
+

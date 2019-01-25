@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69D8090221FAE8A700958CDB /* ARItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8090121FAE8A700958CDB /* ARItem.swift */; };
+		69D8090421FAEC1C00958CDB /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8090321FAEC1C00958CDB /* MapAnnotation.swift */; };
 		8FB21D7B1E13C34900B3E330 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB21D7A1E13C34900B3E330 /* AppDelegate.swift */; };
 		8FB21D7D1E13C34900B3E330 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB21D7C1E13C34900B3E330 /* ViewController.swift */; };
 		8FB21D801E13C34900B3E330 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FB21D7E1E13C34900B3E330 /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69D8090121FAE8A700958CDB /* ARItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARItem.swift; sourceTree = "<group>"; };
+		69D8090321FAEC1C00958CDB /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		8FB21D771E13C34900B3E330 /* AR_Hunt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AR_Hunt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FB21D7A1E13C34900B3E330 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FB21D7C1E13C34900B3E330 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				8FB21D941E13DEA200B3E330 /* Fireball.scnp */,
 				8FB21D951E13DEA200B3E330 /* spark.png */,
 				8FB21D861E13C34900B3E330 /* Info.plist */,
+				69D8090121FAE8A700958CDB /* ARItem.swift */,
+				69D8090321FAEC1C00958CDB /* MapAnnotation.swift */,
 			);
 			path = AR_Hunt;
 			sourceTree = "<group>";
@@ -110,6 +116,7 @@
 				TargetAttributes = {
 					8FB21D761E13C34900B3E330 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9U3992N3XQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -154,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FB21D7D1E13C34900B3E330 /* ViewController.swift in Sources */,
+				69D8090421FAEC1C00958CDB /* MapAnnotation.swift in Sources */,
+				69D8090221FAE8A700958CDB /* ARItem.swift in Sources */,
 				8FB21D8F1E13C39F00B3E330 /* MapViewController.swift in Sources */,
 				8FB21D7B1E13C34900B3E330 /* AppDelegate.swift in Sources */,
 			);
@@ -276,10 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9U3992N3XQ;
 				INFOPLIST_FILE = AR_Hunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.AR-Hunt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamcosby.AR-Hunt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -289,10 +298,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 9U3992N3XQ;
 				INFOPLIST_FILE = AR_Hunt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.razeware.AR-Hunt";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.williamcosby.AR-Hunt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
