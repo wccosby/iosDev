@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		69D8093021FD7EA800958CDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8092F21FD7EA800958CDB /* AppDelegate.swift */; };
-		69D8093221FD7EA800958CDB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8093121FD7EA800958CDB /* ViewController.swift */; };
+		69D8093221FD7EA800958CDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8093121FD7EA800958CDB /* MapViewController.swift */; };
 		69D8093521FD7EA800958CDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D8093321FD7EA800958CDB /* Main.storyboard */; };
 		69D8093721FD7EA900958CDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D8093621FD7EA900958CDB /* Assets.xcassets */; };
 		69D8093A21FD7EA900958CDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D8093821FD7EA900958CDB /* LaunchScreen.storyboard */; };
+		69D8094221FD909000958CDB /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D8094121FD909000958CDB /* Promotion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		69D8092C21FD7EA800958CDB /* Stratus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stratus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D8092F21FD7EA800958CDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		69D8093121FD7EA800958CDB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69D8093121FD7EA800958CDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		69D8093421FD7EA800958CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		69D8093621FD7EA900958CDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69D8093921FD7EA900958CDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69D8093B21FD7EA900958CDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D8094121FD909000958CDB /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				69D8092F21FD7EA800958CDB /* AppDelegate.swift */,
-				69D8093121FD7EA800958CDB /* ViewController.swift */,
+				69D8093121FD7EA800958CDB /* MapViewController.swift */,
 				69D8093321FD7EA800958CDB /* Main.storyboard */,
 				69D8093621FD7EA900958CDB /* Assets.xcassets */,
 				69D8093821FD7EA900958CDB /* LaunchScreen.storyboard */,
 				69D8093B21FD7EA900958CDB /* Info.plist */,
+				69D8094121FD909000958CDB /* Promotion.swift */,
 			);
 			path = Stratus;
 			sourceTree = "<group>";
@@ -135,8 +138,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69D8093221FD7EA800958CDB /* ViewController.swift in Sources */,
+				69D8093221FD7EA800958CDB /* MapViewController.swift in Sources */,
 				69D8093021FD7EA800958CDB /* AppDelegate.swift in Sources */,
+				69D8094221FD909000958CDB /* Promotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
