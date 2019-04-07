@@ -1,24 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h01-ty-c19">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Stratus-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Stratus" id="BYZ-38-t0r" customClass="ViewController" customModule="Stratus_proto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-eT-7Dp">
+                                <rect key="frame" x="142" y="298" width="130" height="130"/>
+                                <color key="backgroundColor" red="0.14119112374230236" green="0.14308032783718561" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="5ma-NK-dKd"/>
+                                    <constraint firstAttribute="width" constant="130" id="ayo-Db-QHB"/>
+                                </constraints>
+                                <state key="normal" title="Map View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BmJ-K1-9TZ" kind="show" id="OL8-1i-EH7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vea-w8-yAm">
+                                <rect key="frame" x="142" y="501" width="130" height="130"/>
+                                <color key="backgroundColor" red="0.14119112374230236" green="0.14308032783718561" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="hnG-qi-Mnd"/>
+                                    <constraint firstAttribute="height" constant="130" id="lJZ-S8-jL2"/>
+                                </constraints>
+                                <state key="normal" title="Camera View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EDk-33-Lou" kind="show" id="3VO-fi-uD6"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vea-w8-yAm" firstAttribute="top" secondItem="YHg-eT-7Dp" secondAttribute="bottom" constant="73" id="LGq-rd-2uP"/>
+                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="leading" secondItem="Vea-w8-yAm" secondAttribute="leading" id="RNC-m6-Vzl"/>
+                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="210" id="Sy2-4W-DLg"/>
+                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sYT-pz-CB4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Stratus" id="NSA-dp-dcj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="781.15942028985512" y="145.3125"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="nUZ-vM-KKk">
+            <objects>
+                <viewController id="BmJ-K1-9TZ" customClass="MapViewController" customModule="Stratus_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IL6-oA-SXX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9cO-o5-nCb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9cO-o5-nCb" secondAttribute="trailing" id="FM8-qn-PKA"/>
+                            <constraint firstItem="9cO-o5-nCb" firstAttribute="top" secondItem="7kW-qb-A2v" secondAttribute="top" id="HoL-gL-BEs"/>
+                            <constraint firstItem="9cO-o5-nCb" firstAttribute="leading" secondItem="IL6-oA-SXX" secondAttribute="leading" id="sdX-j5-Uz1"/>
+                            <constraint firstItem="9cO-o5-nCb" firstAttribute="bottom" secondItem="7kW-qb-A2v" secondAttribute="bottom" id="zNp-Rp-aIe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7kW-qb-A2v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="RQm-tH-0Oq"/>
+                    <connections>
+                        <outlet property="mapView" destination="9cO-o5-nCb" id="99n-Oe-LT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fUY-6m-sMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="-21.428571428571427"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="Tlb-x1-IV6">
+            <objects>
+                <viewController id="EDk-33-Lou" customClass="CameraViewController" customModule="Stratus_proto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="437-Fl-lbw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TyS-pL-oza">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TyS-pL-oza" firstAttribute="trailing" secondItem="zgi-Y0-tkJ" secondAttribute="trailing" id="Xnr-J4-K3P"/>
+                            <constraint firstItem="TyS-pL-oza" firstAttribute="top" secondItem="zgi-Y0-tkJ" secondAttribute="top" id="e9b-Am-jPY"/>
+                            <constraint firstItem="TyS-pL-oza" firstAttribute="leading" secondItem="zgi-Y0-tkJ" secondAttribute="leading" id="eE6-Oh-g2W"/>
+                            <constraint firstItem="TyS-pL-oza" firstAttribute="bottom" secondItem="zgi-Y0-tkJ" secondAttribute="bottom" id="fd1-cf-oKJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zgi-Y0-tkJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="TyS-pL-oza" id="dPS-GO-HOg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVa-ur-BMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="631.47321428571422"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4IW-9o-lBe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h01-ty-c19" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U7z-xJ-cjD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QGe-Xw-ikA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mof-9w-ooa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128.98550724637681" y="145.3125"/>
         </scene>
     </scenes>
 </document>
