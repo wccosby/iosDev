@@ -19,7 +19,7 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
     var promoTargets = [Promotion]()
     
     let locationManager = CLLocationManager()
-    var userLocation = CLLocation(latitude: -37.810679, longitude: 144.970030)
+    var userLocation: CLLocation!
     
     var heading: Double! = 0.0
     var distance : Float! = 0.0
@@ -31,8 +31,9 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Running View Did Load function...")
         
-        
+        startReceivingLocationChanges()
         // TODO don't really get this
         sceneView.delegate = self
         
@@ -42,22 +43,6 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         // set the scene to the view
         sceneView.scene = scene
         
-        
-        
-        // establish locations initially (will replace this)
-        setupPromoLocations()
-        
-    
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // Implementing this method is required
-        print(error.localizedDescription)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
         // create AR session configuration
         let configuration = ARWorldTrackingConfiguration()
         // set the y-axis of device to direction of gravity as detected by device, set x- and z-axes to the longitude and latitude as measured by location services
@@ -65,14 +50,36 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         
         // run the view's session
         sceneView.session.run(configuration)
-        // start location services
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        if CLLocationManager.authorizationStatus() == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
+
+//        print("location: ", userLocation)
+        
+        // establish locations initially (will replace this)
+        setupPromoLocations()
+    }
+    
+    func startReceivingLocationChanges() {
+        let authorizationStatus = CLLocationManager.authorizationStatus()
+        if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
+            // User has not authorized this information
+            return
         }
-        locationManager.requestLocation()
-        print("location: ", userLocation)
+        
+        if !CLLocationManager.locationServicesEnabled() {
+            // location services not available
+            return
+        }
+        
+        // configure and start the service
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.distanceFilter = 10.0 // in meters
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+        print("Location!!!")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // Implementing this method is required
+        print(error.localizedDescription)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -103,6 +110,9 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         }
     }
     
+    ///////////////////////////
+    // Control what happens when the locationManager updates the location
+    ///////////////////////////
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
             userLocation = location
