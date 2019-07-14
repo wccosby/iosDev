@@ -19,11 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-eT-7Dp">
-                                <rect key="frame" x="142" y="298" width="130" height="130"/>
+                                <rect key="frame" x="142" y="138" width="130" height="130"/>
                                 <color key="backgroundColor" red="0.14119112374230236" green="0.14308032783718561" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="5ma-NK-dKd"/>
-                                    <constraint firstAttribute="width" constant="130" id="ayo-Db-QHB"/>
+                                    <constraint firstAttribute="height" constant="130" id="Tub-V6-DKk"/>
                                 </constraints>
                                 <state key="normal" title="Map View">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,11 +32,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vea-w8-yAm">
-                                <rect key="frame" x="142" y="501" width="130" height="130"/>
+                                <rect key="frame" x="142" y="341" width="130" height="130"/>
                                 <color key="backgroundColor" red="0.14119112374230236" green="0.14308032783718561" blue="1" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="hnG-qi-Mnd"/>
-                                    <constraint firstAttribute="height" constant="130" id="lJZ-S8-jL2"/>
+                                    <constraint firstAttribute="height" constant="130" id="AFe-UV-ZUO"/>
                                 </constraints>
                                 <state key="normal" title="Camera View">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,13 +44,32 @@
                                     <segue destination="EDk-33-Lou" kind="show" id="3VO-fi-uD6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koC-2y-Rf0">
+                                <rect key="frame" x="142" y="543" width="130" height="130"/>
+                                <color key="backgroundColor" red="0.1411911237" green="0.14308032779999999" blue="1" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="2jM-2k-Ada"/>
+                                    <constraint firstAttribute="height" constant="130" id="Pz5-CB-Liz"/>
+                                </constraints>
+                                <state key="normal" title="Locale Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="GMC-Td-TnS" kind="show" id="uq2-wS-viL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Vea-w8-yAm" firstAttribute="top" secondItem="YHg-eT-7Dp" secondAttribute="bottom" constant="73" id="LGq-rd-2uP"/>
-                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="leading" secondItem="Vea-w8-yAm" secondAttribute="leading" id="RNC-m6-Vzl"/>
-                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="210" id="Sy2-4W-DLg"/>
-                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sYT-pz-CB4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YHg-eT-7Dp" secondAttribute="trailing" constant="142" id="ANg-nX-THh"/>
+                            <constraint firstItem="Vea-w8-yAm" firstAttribute="top" secondItem="YHg-eT-7Dp" secondAttribute="bottom" constant="73" id="D8a-mp-zMA"/>
+                            <constraint firstItem="Vea-w8-yAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="DMb-yM-7zt"/>
+                            <constraint firstItem="koC-2y-Rf0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="O6q-ih-eGp"/>
+                            <constraint firstItem="koC-2y-Rf0" firstAttribute="top" secondItem="Vea-w8-yAm" secondAttribute="bottom" constant="72" id="W7P-rS-1fJ"/>
+                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="f8F-6m-yrQ"/>
+                            <constraint firstItem="YHg-eT-7Dp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="fjd-tJ-tot"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="koC-2y-Rf0" secondAttribute="trailing" constant="142" id="pcU-iL-sts"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vea-w8-yAm" secondAttribute="trailing" constant="142" id="xiG-vQ-QUM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -90,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fUY-6m-sMQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828.985507246377" y="-21.428571428571427"/>
+            <point key="canvasLocation" x="1829" y="-627"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="Tlb-x1-IV6">
@@ -119,7 +136,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVa-ur-BMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828.985507246377" y="631.47321428571422"/>
+            <point key="canvasLocation" x="1829" y="145"/>
+        </scene>
+        <!--Locale Camera View Controller-->
+        <scene sceneID="2ha-gL-Gc2">
+            <objects>
+                <viewController id="GMC-Td-TnS" customClass="LocaleCameraViewController" customModule="Stratus_proto" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aZd-EV-Z1T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oR4-7M-GXs">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oR4-7M-GXs" secondAttribute="trailing" id="45x-sV-uPb"/>
+                            <constraint firstItem="oR4-7M-GXs" firstAttribute="top" secondItem="HTJ-0F-Dl7" secondAttribute="top" id="eqN-O1-Xyu"/>
+                            <constraint firstItem="oR4-7M-GXs" firstAttribute="bottom" secondItem="HTJ-0F-Dl7" secondAttribute="bottom" id="fRi-kT-E5E"/>
+                            <constraint firstItem="oR4-7M-GXs" firstAttribute="leading" secondItem="aZd-EV-Z1T" secondAttribute="leading" id="vDd-SF-Quh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HTJ-0F-Dl7"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="oR4-7M-GXs" id="mDm-Qi-2tw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLN-IN-mAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1828.985507246377" y="965.625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4IW-9o-lBe">

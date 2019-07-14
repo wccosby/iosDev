@@ -19,6 +19,7 @@
 		6965D9532259F5F900B986DA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 6965D9522259F5F900B986DA /* art.scnassets */; };
 		6965D9552259F7AE00B986DA /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6965D9542259F7AE00B986DA /* Promotion.swift */; };
 		6965D957225A0CE000B986DA /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6965D956225A0CE000B986DA /* MapAnnotation.swift */; };
+		6972055322A66DCB0068E89F /* LocaleCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6972055222A66DCB0068E89F /* LocaleCameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		6965D9522259F5F900B986DA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		6965D9542259F7AE00B986DA /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		6965D956225A0CE000B986DA /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		6972055222A66DCB0068E89F /* LocaleCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleCameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				6965D9502259F59D00B986DA /* String+Extension.swift */,
 				6965D9522259F5F900B986DA /* art.scnassets */,
 				6965D9542259F7AE00B986DA /* Promotion.swift */,
+				6972055222A66DCB0068E89F /* LocaleCameraViewController.swift */,
 			);
 			path = Stratus_proto;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				6965D9552259F7AE00B986DA /* Promotion.swift in Sources */,
 				6965D94D2259EB7800B986DA /* CameraViewController.swift in Sources */,
 				6965D94B2259EB6600B986DA /* MapViewController.swift in Sources */,
+				6972055322A66DCB0068E89F /* LocaleCameraViewController.swift in Sources */,
 				6965D94F2259F55A00B986DA /* FloatingPoint+Extension.swift in Sources */,
 				6965D9512259F59D00B986DA /* String+Extension.swift in Sources */,
 				6965D9392259E9C700B986DA /* AppDelegate.swift in Sources */,

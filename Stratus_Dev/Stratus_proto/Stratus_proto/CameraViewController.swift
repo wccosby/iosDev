@@ -15,6 +15,7 @@ import CoreLocation
 
 class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     
+    
     @IBOutlet weak var sceneView: ARSCNView!
     var promoTargets = [Promotion]()
     
@@ -77,11 +78,18 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         print("Location!!!")
     }
     
+    
+    ///////////////////////////
+    // specific error reporting
+    ///////////////////////////
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         // Implementing this method is required
         print(error.localizedDescription)
     }
     
+    ///////////////////////////
+    // Pause the scene if the user closes this view
+    ///////////////////////////
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -89,26 +97,32 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         sceneView.session.pause()
     }
     
-    func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
-        for promo in promoTargets {
-            let promoScene = SCNScene(named: promo.promoSceneName)!
-            self.modelNode = promoScene.rootNode.childNode(withName: promo.promoContentRootNodeName, recursively: true)!
-            // move model's pivot to its center in the Y axis
-            
-            self.distance = Float(promo.location.distance(from: self.userLocation))
-            print("USER LOCATION: ", userLocation as Any)
-            print("DISTANCE!!! ", self.distance as Any)
-            
-            let (minBox, maxBox) = self.modelNode.boundingBox
-            self.modelNode.pivot = SCNMatrix4MakeTranslation(0, (maxBox.y - minBox.y), 0)
-            self.originalTransform = self.modelNode.transform
-            
-            positionModel(promo.location)
-            
-            sceneView.scene.rootNode.addChildNode(self.modelNode)
-            print(self.modelNode as Any)
-        }
-    }
+    
+    
+    
+    ///////////////////////////
+    // evidently just not needed
+    ///////////////////////////
+//    func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
+//        for promo in promoTargets {
+//            let promoScene = SCNScene(named: promo.promoSceneName)!
+//            self.modelNode = promoScene.rootNode.childNode(withName: promo.promoContentRootNodeName, recursively: true)!
+//            // move model's pivot to its center in the Y axis
+//
+//            self.distance = Float(promo.location.distance(from: self.userLocation))
+//            print("USER LOCATION: ", userLocation as Any)
+//            print("DISTANCE!!! ", self.distance as Any)
+//
+//            let (minBox, maxBox) = self.modelNode.boundingBox
+//            self.modelNode.pivot = SCNMatrix4MakeTranslation(0, (maxBox.y - minBox.y), 0)
+//            self.originalTransform = self.modelNode.transform
+//
+//            positionModel(promo.location)
+//
+//            sceneView.scene.rootNode.addChildNode(self.modelNode)
+//            print(self.modelNode as Any)
+//        }
+//    }
     
     ///////////////////////////
     // Control what happens when the locationManager updates the location
@@ -132,6 +146,9 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
                 positionModel(promo.location)
                 
                 sceneView.scene.rootNode.addChildNode(self.modelNode)
+                let billboardContraint = SCNBillboardConstraint()
+                billboardContraint.freeAxes = [.X,.Y,.Z]
+                modelNode.constraints = [billboardContraint]
                 print(self.modelNode as Any)
             }
         }
@@ -167,10 +184,18 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
 //    }
 //
     
+    ///////////
+    // calculate the angle to the user for the rotation
+    ///////////
+    func angleToUser() {
+        return
+    }
     
     func positionModel(_ location: CLLocation) {
         // Rotate Node
-        self.modelNode.transform = rotateNode(Float(-1 * (self.heading - 180).toRadians()), self.originalTransform)
+        // TODO change heading to be the calculation of the angle between the "center" of the object and the user
+//        self.modelNode.transform = rotateNode(Float(-1 * (self.heading - 180).toRadians()), self.originalTransform)
+//        self.modelNode.transform = rotateNode(Float(-1 * (angleToUser() - 180).toRadians()), self.originalTransform)
         
         // Translate Node
         self.modelNode.position = translateNode(location)
@@ -201,8 +226,8 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         return SCNVector3Make(transform.columns.3.x, 20, transform.columns.3.z)
     }
     
-    func transformMatrix(_ matrix: simd_float4x4, _ originLocation: CLLocation, _ driverLocation: CLLocation) -> simd_float4x4 {
-        let bearing = bearingBetweenLocations(userLocation, driverLocation)
+    func transformMatrix(_ matrix: simd_float4x4, _ originLocation: CLLocation, _ contentLocation: CLLocation) -> simd_float4x4 {
+        let bearing = bearingBetweenLocations(userLocation, contentLocation)
         let rotationMatrix = rotateAroundY(matrix_identity_float4x4, Float(bearing))
         
         let position = vector_float4(0.0, 0.0, -distance, 0.0)
@@ -219,6 +244,7 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
         return matrix
     }
     
+    ////
     func rotateAroundY(_ matrix: simd_float4x4, _ degrees: Float) -> simd_float4x4 {
         var matrix = matrix
         
@@ -255,10 +281,10 @@ class CameraViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
     func setupPromoLocations() {
         let firstPromo = Promotion(promoDescription: "Buy a car!", storeName: "This Store!", location: CLLocation(latitude: -37.810684, longitude: 144.969848), promoSceneName: "art.scnassets/Car.dae", promoContentRootNodeName: "Car")
         
-        let secondPromo = Promotion(promoDescription: "Home!", storeName: "This is your home!", location: CLLocation(latitude: -37.816088, longitude: 144.989206), promoSceneName: "art.scnassets/Car.dae", promoContentRootNodeName: "Car")
+//        let secondPromo = Promotion(promoDescription: "Home!", storeName: "This is your home!", location: CLLocation(latitude: -37.816063, longitude: 144.989178), promoSceneName: "art.scnassets/Car.dae", promoContentRootNodeName: "Car")
         
         promoTargets.append(firstPromo)
-        promoTargets.append(secondPromo)
+//        promoTargets.append(secondPromo)
     }
     
     
